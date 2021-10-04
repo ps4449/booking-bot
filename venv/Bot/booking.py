@@ -1,6 +1,7 @@
 import os
 import Bot.constants as const
 from selenium import webdriver
+from Bot.booking_filtration import BookingFiltration
 
 class Booking(webdriver.Chrome):
     def __init__(self, driver_path = r"C:\SeleniumDrivers", teardown = False):
@@ -73,7 +74,12 @@ class Booking(webdriver.Chrome):
             increase_adults[0].click()
 
     def click_search(self):
-        search_button = self.find_elements_by_css_selector(
+        search_button = self.find_element_by_css_selector(
             'button[type="submit"]'
         )
         search_button.click()
+
+    def apply_filtration(self):
+        filtration = BookingFiltration(driver=self)
+        filtration.apply_star_rating(3, 4, 5)
+        filtration.sort_price_lowest_first()
