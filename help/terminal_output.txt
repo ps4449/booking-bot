@@ -591,4 +591,645 @@ Required-by:
 +-------------------------------------------------------------------------------+-------------+-------------+
 Exiting...
 
+(base) C:\Users\priya\Desktop\Coding\booking-bot>python main.py
+Where do you wish to go (city name: New York, Ooty etc)?Ooty
+Please enter your check-in date (YYYY-MM-DD).
+Traceback (most recent call last):
+  File "main.py", line 8, in <module>
+    bot.select_dates(checkin=input("Please enter your check-in date (YYYY-MM-DD)."),
+KeyboardInterrupt
+^C
+(base) C:\Users\priya\Desktop\Coding\booking-bot>python main.py
+Where do you wish to go (city name: New York, Ooty etc)?New York
+Please enter your check-in date (YYYY-MM-DD).2021-12-12
+Please enter your check-in date (YYYY-MM-DD).2021-12-14
+Enter the number of adults.4
+Traceback (most recent call last):
+  File "main.py", line 10, in <module>
+    bot.select_members(input("Enter the number of adults."))
+  File "C:\Users\priya\Desktop\Coding\booking-bot\Bot\booking.py", line 65, in select_members
+    for i in range(1, count):
+TypeError: 'str' object cannot be interpreted as an integer
+
+(base) C:\Users\priya\Desktop\Coding\booking-bot>python main.py
+Where do you wish to go (city name: New York, Ooty etc)?Ooty
+Please enter your check-in date (YYYY-MM-DD).2021-12-12
+Please enter your check-in date (YYYY-MM-DD).2021-12-14
+Enter the number of adults.4
+Traceback (most recent call last):
+  File "main.py", line 14, in <module>
+    bot.report_results()
+  File "C:\Users\priya\Desktop\Coding\booking-bot\Bot\booking.py", line 84, in report_results
+    table.add_rows(report.get_deal_attributes())
+  File "C:\Users\priya\Desktop\Coding\booking-bot\Bot\booking_report.py", line 21, in get_deal_attributes
+    hotel_score = deal_box.find_element(By.CLASS_NAME, 'bd528f9ea6').get_attribute('innerHTML')
+  File "C:\Users\priya\anaconda3\lib\site-packages\selenium\webdriver\remote\webelement.py", line 658, in find_element
+    return self._execute(Command.FIND_CHILD_ELEMENT,
+  File "C:\Users\priya\anaconda3\lib\site-packages\selenium\webdriver\remote\webelement.py", line 633, in _execute
+    return self._parent.execute(command, params)
+  File "C:\Users\priya\anaconda3\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 321, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\priya\anaconda3\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 242, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {"method":"css selector","selector":".bd528f9ea6"}
+  (Session info: chrome=95.0.4638.69)
+
+
+(base) C:\Users\priya\Desktop\Coding\booking-bot>python main.py
+Where do you wish to go (city name: New York, Ooty etc)?Ooty
+Please enter your check-in date (YYYY-MM-DD).2021-12-12
+Please enter your check-in date (YYYY-MM-DD).2021-12-14
+Enter the number of adults.4
+Traceback (most recent call last):
+  File "main.py", line 14, in <module>
+    bot.report_results()
+  File "C:\Users\priya\Desktop\Coding\booking-bot\Bot\booking.py", line 85, in report_results
+    print(table)
+  File "C:\Users\priya\anaconda3\lib\site-packages\prettytable\prettytable.py", line 316, in __str__
+    return self.get_string()
+  File "C:\Users\priya\anaconda3\lib\site-packages\prettytable\prettytable.py", line 1616, in get_string
+    rows = self._get_rows(options)
+  File "C:\Users\priya\anaconda3\lib\site-packages\prettytable\prettytable.py", line 1528, in _get_rows
+    rows = copy.deepcopy(self._rows)
+  File "C:\Users\priya\anaconda3\lib\copy.py", line 146, in deepcopy
+    y = copier(x, memo)
+  File "C:\Users\priya\anaconda3\lib\copy.py", line 205, in _deepcopy_list
+    append(deepcopy(a, memo))
+  File "C:\Users\priya\anaconda3\lib\copy.py", line 146, in deepcopy
+    y = copier(x, memo)
+  File "C:\Users\priya\anaconda3\lib\copy.py", line 205, in _deepcopy_list
+    append(deepcopy(a, memo))
+  File "C:\Users\priya\anaconda3\lib\copy.py", line 172, in deepcopy
+    y = _reconstruct(x, memo, *rv)
+  File "C:\Users\priya\anaconda3\lib\copy.py", line 270, in _reconstruct
+    state = deepcopy(state, memo)
+  File "C:\Users\priya\anaconda3\lib\copy.py", line 146, in deepcopy
+    y = copier(x, memo)
+  File "C:\Users\priya\anaconda3\lib\copy.py", line 230, in _deepcopy_dict
+    y[deepcopy(key, memo)] = deepcopy(value, memo)
+  File "C:\Users\priya\anaconda3\lib\copy.py", line 172, in deepcopy
+    y = _reconstruct(x, memo, *rv)
+  File "C:\Users\priya\anaconda3\lib\copy.py", line 270, in _reconstruct
+    state = deepcopy(state, memo)
+  File "C:\Users\priya\anaconda3\lib\copy.py", line 146, in deepcopy
+    y = copier(x, memo)
+  File "C:\Users\priya\anaconda3\lib\copy.py", line 230, in _deepcopy_dict
+    y[deepcopy(key, memo)] = deepcopy(value, memo)
+  File "C:\Users\priya\anaconda3\lib\copy.py", line 172, in deepcopy
+    y = _reconstruct(x, memo, *rv)
+  File "C:\Users\priya\anaconda3\lib\copy.py", line 270, in _reconstruct
+    state = deepcopy(state, memo)
+  File "C:\Users\priya\anaconda3\lib\copy.py", line 146, in deepcopy
+    y = copier(x, memo)
+  File "C:\Users\priya\anaconda3\lib\copy.py", line 230, in _deepcopy_dict
+    y[deepcopy(key, memo)] = deepcopy(value, memo)
+  File "C:\Users\priya\anaconda3\lib\copy.py", line 172, in deepcopy
+    y = _reconstruct(x, memo, *rv)
+  File "C:\Users\priya\anaconda3\lib\copy.py", line 270, in _reconstruct
+    state = deepcopy(state, memo)
+  File "C:\Users\priya\anaconda3\lib\copy.py", line 146, in deepcopy
+    y = copier(x, memo)
+  File "C:\Users\priya\anaconda3\lib\copy.py", line 230, in _deepcopy_dict
+    y[deepcopy(key, memo)] = deepcopy(value, memo)
+  File "C:\Users\priya\anaconda3\lib\copy.py", line 161, in deepcopy
+    rv = reductor(4)
+TypeError: cannot pickle '_thread.lock' object
+
+(base) C:\Users\priya\Desktop\Coding\booking-bot>python main.py
+Where do you wish to go (city name: New York, Ooty etc)?Ooty
+Please enter your check-in date (YYYY-MM-DD).2021-12-12
+Please enter your check-in date (YYYY-MM-DD).2021-12-14
+Enter the number of adults.4
+Traceback (most recent call last):
+  File "main.py", line 14, in <module>
+    bot.report_results()
+  File "C:\Users\priya\Desktop\Coding\booking-bot\Bot\booking.py", line 84, in report_results
+    table.add_rows(report.get_deal_attributes())
+  File "C:\Users\priya\Desktop\Coding\booking-bot\Bot\booking_report.py", line 21, in get_deal_attributes
+    hotel_score = deal_box.find_element(By.CLASS_NAME, 'bd528f9ea6').get_attribute('innerHTML').strip()
+  File "C:\Users\priya\anaconda3\lib\site-packages\selenium\webdriver\remote\webelement.py", line 658, in find_element
+    return self._execute(Command.FIND_CHILD_ELEMENT,
+  File "C:\Users\priya\anaconda3\lib\site-packages\selenium\webdriver\remote\webelement.py", line 633, in _execute
+    return self._parent.execute(command, params)
+  File "C:\Users\priya\anaconda3\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 321, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\priya\anaconda3\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 242, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {"method":"css selector","selector":".bd528f9ea6"}
+  (Session info: chrome=95.0.4638.69)
+
+
+(base) C:\Users\priya\Desktop\Coding\booking-bot>python main.py
+Where do you wish to go (city name: New York, Ooty etc)?New York
+Traceback (most recent call last):
+  File "main.py", line 7, in <module>
+    bot.select_place(input("Where do you wish to go (city name: New York, Ooty etc)?"))
+  File "C:\Users\priya\Desktop\Coding\booking-bot\Bot\booking.py", line 41, in select_place
+    first_result[0].click()
+  File "C:\Users\priya\anaconda3\lib\site-packages\selenium\webdriver\remote\webelement.py", line 80, in click
+    self._execute(Command.CLICK_ELEMENT)
+  File "C:\Users\priya\anaconda3\lib\site-packages\selenium\webdriver\remote\webelement.py", line 633, in _execute
+    return self._parent.execute(command, params)
+  File "C:\Users\priya\anaconda3\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 321, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\priya\anaconda3\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 242, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.StaleElementReferenceException: Message: stale element reference: element is not attached to the page document
+  (Session info: chrome=95.0.4638.69)
+
+
+(base) C:\Users\priya\Desktop\Coding\booking-bot>python main.py
+Where do you wish to go (city name: New York, Ooty etc)?New York
+Please enter your check-in date (YYYY-MM-DD).2021-12-12
+Please enter your check-in date (YYYY-MM-DD).2021-12-14
+Enter the number of adults.4
+Traceback (most recent call last):
+  File "main.py", line 14, in <module>
+    bot.report_results()
+  File "C:\Users\priya\Desktop\Coding\booking-bot\Bot\booking.py", line 84, in report_results
+    table.add_rows(report.get_deal_attributes())
+  File "C:\Users\priya\Desktop\Coding\booking-bot\Bot\booking_report.py", line 21, in get_deal_attributes
+    hotel_score = deal_box.find_element(By.CLASS_NAME, 'bd525f9ea6').get_attribute('innerHTML').strip()
+  File "C:\Users\priya\anaconda3\lib\site-packages\selenium\webdriver\remote\webelement.py", line 658, in find_element
+    return self._execute(Command.FIND_CHILD_ELEMENT,
+  File "C:\Users\priya\anaconda3\lib\site-packages\selenium\webdriver\remote\webelement.py", line 633, in _execute
+    return self._parent.execute(command, params)
+  File "C:\Users\priya\anaconda3\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 321, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\priya\anaconda3\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 242, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {"method":"css selector","selector":".bd525f9ea6"}
+  (Session info: chrome=95.0.4638.69)
+
+
+(base) C:\Users\priya\Desktop\Coding\booking-bot>python main.py
+Where do you wish to go (city name: New York, Ooty etc)?Ooty
+Please enter your check-in date (YYYY-MM-DD).2021-12-12
+Please enter your check-in date (YYYY-MM-DD).2021-12-14
+Enter the number of adults.4
+Traceback (most recent call last):
+  File "main.py", line 14, in <module>
+    bot.report_results()
+  File "C:\Users\priya\Desktop\Coding\booking-bot\Bot\booking.py", line 84, in report_results
+    table.add_rows(report.get_deal_attributes())
+  File "C:\Users\priya\Desktop\Coding\booking-bot\Bot\booking_report.py", line 21, in get_deal_attributes
+    hotel_score = deal_box.find_element(By.XPATH, "//div[@class='_9c5f726ff bd525f9ea6']").get_attribute('innerHTML').strip()
+  File "C:\Users\priya\anaconda3\lib\site-packages\selenium\webdriver\remote\webelement.py", line 658, in find_element
+    return self._execute(Command.FIND_CHILD_ELEMENT,
+  File "C:\Users\priya\anaconda3\lib\site-packages\selenium\webdriver\remote\webelement.py", line 633, in _execute
+    return self._parent.execute(command, params)
+  File "C:\Users\priya\anaconda3\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 321, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\priya\anaconda3\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 242, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {"method":"xpath","selector":"//div[@class='_9c5f726ff bd525f9ea6']"}
+  (Session info: chrome=95.0.4638.69)
+
+
+(base) C:\Users\priya\Desktop\Coding\booking-bot>python main.py
+Where do you wish to go (city name: New York, Ooty etc)?Ooty
+Please enter your check-in date (YYYY-MM-DD).2021-12-12
+Please enter your check-in date (YYYY-MM-DD).2021-12-14
+Enter the number of adults.4
+Traceback (most recent call last):
+  File "main.py", line 14, in <module>
+    bot.report_results()
+  File "C:\Users\priya\Desktop\Coding\booking-bot\Bot\booking.py", line 84, in report_results
+    table.add_rows(report.get_deal_attributes())
+  File "C:\Users\priya\Desktop\Coding\booking-bot\Bot\booking_report.py", line 21, in get_deal_attributes
+    hotel_score = deal_box.find_element(By.CLASS_NAME, "_9c5f726ff").get_attribute('innerHTML').strip()
+  File "C:\Users\priya\anaconda3\lib\site-packages\selenium\webdriver\remote\webelement.py", line 658, in find_element
+    return self._execute(Command.FIND_CHILD_ELEMENT,
+  File "C:\Users\priya\anaconda3\lib\site-packages\selenium\webdriver\remote\webelement.py", line 633, in _execute
+    return self._parent.execute(command, params)
+  File "C:\Users\priya\anaconda3\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 321, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\priya\anaconda3\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 242, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {"method":"css selector","selector":"._9c5f726ff"}
+  (Session info: chrome=95.0.4638.69)
+
+
+(base) C:\Users\priya\Desktop\Coding\booking-bot>python main.py
+Where do you wish to go (city name: New York, Ooty etc)?Ooty
+Please enter your check-in date (YYYY-MM-DD).2021-12-12
+Please enter your check-in date (YYYY-MM-DD).2021-12-14
+Enter the number of adults.4
+Traceback (most recent call last):
+  File "main.py", line 14, in <module>
+    bot.report_results()
+  File "C:\Users\priya\Desktop\Coding\booking-bot\Bot\booking.py", line 84, in report_results
+    table.add_rows(report.get_deal_attributes())
+  File "C:\Users\priya\Desktop\Coding\booking-bot\Bot\booking_report.py", line 21, in get_deal_attributes
+    hotel_score = deal_box.find_element(By.CSS_SELECTOR, "div[aria-label='Scored ']").get_attribute('innerHTML').strip()
+  File "C:\Users\priya\anaconda3\lib\site-packages\selenium\webdriver\remote\webelement.py", line 658, in find_element
+    return self._execute(Command.FIND_CHILD_ELEMENT,
+  File "C:\Users\priya\anaconda3\lib\site-packages\selenium\webdriver\remote\webelement.py", line 633, in _execute
+    return self._parent.execute(command, params)
+  File "C:\Users\priya\anaconda3\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 321, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\priya\anaconda3\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 242, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {"method":"css selector","selector":"div[aria-label='Scored ']"}
+  (Session info: chrome=95.0.4638.69)
+
+
+(base) C:\Users\priya\Desktop\Coding\booking-bot>python main.py
+Where do you wish to go (city name: New York, Ooty etc)?Ooty
+Please enter your check-in date (YYYY-MM-DD).2021-12-12
+Please enter your check-in date (YYYY-MM-DD).2021-12-14
+Enter the number of adults.4
+Traceback (most recent call last):
+  File "main.py", line 14, in <module>
+    bot.report_results()
+  File "C:\Users\priya\Desktop\Coding\booking-bot\Bot\booking.py", line 84, in report_results
+    table.add_rows(report.get_deal_attributes())
+  File "C:\Users\priya\Desktop\Coding\booking-bot\Bot\booking_report.py", line 21, in get_deal_attributes
+    hotel_score = deal_box.find_element(By.CSS_SELECTOR, "div[aria-label='Scored 8.8 ']").get_attribute('innerHTML').strip()
+  File "C:\Users\priya\anaconda3\lib\site-packages\selenium\webdriver\remote\webelement.py", line 658, in find_element
+    return self._execute(Command.FIND_CHILD_ELEMENT,
+  File "C:\Users\priya\anaconda3\lib\site-packages\selenium\webdriver\remote\webelement.py", line 633, in _execute
+    return self._parent.execute(command, params)
+  File "C:\Users\priya\anaconda3\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 321, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\priya\anaconda3\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 242, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {"method":"css selector","selector":"div[aria-label='Scored 8.8 ']"}
+  (Session info: chrome=95.0.4638.69)
+
+
+(base) C:\Users\priya\Desktop\Coding\booking-bot>python main.py
+Where do you wish to go (city name: New York, Ooty etc)?Ooty
+Please enter your check-in date (YYYY-MM-DD).2021-12-12
+Please enter your check-in date (YYYY-MM-DD).2021-12-14
+Enter the number of adults.4
+Traceback (most recent call last):
+  File "main.py", line 14, in <module>
+    bot.report_results()
+  File "C:\Users\priya\Desktop\Coding\booking-bot\Bot\booking.py", line 84, in report_results
+    table.add_rows(report.get_deal_attributes())
+  File "C:\Users\priya\Desktop\Coding\booking-bot\Bot\booking_report.py", line 21, in get_deal_attributes
+    hotel_score = deal_box.find_elements(By.CLASS_NAME, "_9c5f726ff")[0].get_attribute('innerHTML').strip()
+IndexError: list index out of range
+
+(base) C:\Users\priya\Desktop\Coding\booking-bot>python main.py
+Where do you wish to go (city name: New York, Ooty etc)?Ooty
+Please enter your check-in date (YYYY-MM-DD).2021-12-12
+Please enter your check-in date (YYYY-MM-DD).2021-12-14
+Enter the number of adults.4
+[<selenium.webdriver.remote.webelement.WebElement (session="f75e919cf5ea54f3d023928874cb2172", element="b4a307a9-db29-4aa1-ab81-743881cd6082")>, <selenium.webdriver.remote.webelement.WebElement (session="f75e919cf5ea54f3d023928874cb2
+172", element="91c6c935-1395-44e1-9e5f-3fef0d0c61d4")>]
+[]
+[]
+[<selenium.webdriver.remote.webelement.WebElement (session="f75e919cf5ea54f3d023928874cb2172", element="6839fe39-386a-42fe-b7b2-7c4708e4b60e")>, <selenium.webdriver.remote.webelement.WebElement (session="f75e919cf5ea54f3d023928874cb2
+172", element="a0f21cb4-076a-4fe0-9ad0-88c3ee5679e0")>]
+[<selenium.webdriver.remote.webelement.WebElement (session="f75e919cf5ea54f3d023928874cb2172", element="b22e642f-a37e-4149-9fa4-9aded07735da")>, <selenium.webdriver.remote.webelement.WebElement (session="f75e919cf5ea54f3d023928874cb2
+172", element="ae62f6e8-c341-4559-a0ec-7e270be458f8")>]
+Traceback (most recent call last):
+  File "main.py", line 14, in <module>
+    bot.report_results()
+  File "C:\Users\priya\Desktop\Coding\booking-bot\Bot\booking.py", line 84, in report_results
+    table.add_rows(report.get_deal_attributes())
+  File "C:\Users\priya\Desktop\Coding\booking-bot\Bot\booking_report.py", line 21, in get_deal_attributes
+    hotel_score = deal_box.find_elements(By.CLASS_NAME, "_9c5f726ff")
+  File "C:\Users\priya\anaconda3\lib\site-packages\selenium\webdriver\remote\webelement.py", line 684, in find_elements
+    return self._execute(Command.FIND_CHILD_ELEMENTS,
+  File "C:\Users\priya\anaconda3\lib\site-packages\selenium\webdriver\remote\webelement.py", line 633, in _execute
+    return self._parent.execute(command, params)
+  File "C:\Users\priya\anaconda3\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 319, in execute
+    response = self.command_executor.execute(driver_command, params)
+  File "C:\Users\priya\anaconda3\lib\site-packages\selenium\webdriver\remote\remote_connection.py", line 374, in execute
+    return self._request(command_info[0], url, body=data)
+  File "C:\Users\priya\anaconda3\lib\site-packages\selenium\webdriver\remote\remote_connection.py", line 397, in _request
+    resp = self._conn.request(method, url, body=body, headers=headers)
+  File "C:\Users\priya\anaconda3\lib\site-packages\urllib3\request.py", line 79, in request
+    return self.request_encode_body(
+  File "C:\Users\priya\anaconda3\lib\site-packages\urllib3\request.py", line 171, in request_encode_body
+    return self.urlopen(method, url, **extra_kw)
+  File "C:\Users\priya\anaconda3\lib\site-packages\urllib3\poolmanager.py", line 336, in urlopen
+    response = conn.urlopen(method, u.request_uri, **kw)
+  File "C:\Users\priya\anaconda3\lib\site-packages\urllib3\connectionpool.py", line 670, in urlopen
+    httplib_response = self._make_request(
+  File "C:\Users\priya\anaconda3\lib\site-packages\urllib3\connectionpool.py", line 426, in _make_request
+    six.raise_from(e, None)
+  File "<string>", line 3, in raise_from
+  File "C:\Users\priya\anaconda3\lib\site-packages\urllib3\connectionpool.py", line 421, in _make_request
+    httplib_response = conn.getresponse()
+  File "C:\Users\priya\anaconda3\lib\http\client.py", line 1347, in getresponse
+    response.begin()
+  File "C:\Users\priya\anaconda3\lib\http\client.py", line 307, in begin
+    version, status, reason = self._read_status()
+  File "C:\Users\priya\anaconda3\lib\http\client.py", line 268, in _read_status
+    line = str(self.fp.readline(_MAXLINE + 1), "iso-8859-1")
+  File "C:\Users\priya\anaconda3\lib\socket.py", line 669, in readinto
+    return self._sock.recv_into(b)
+KeyboardInterrupt
+^C
+(base) C:\Users\priya\Desktop\Coding\booking-bot>python main.py
+Where do you wish to go (city name: New York, Ooty etc)?Ooty
+Please enter your check-in date (YYYY-MM-DD).2021-12-12
+Please enter your check-in date (YYYY-MM-DD).2021-12-14
+Enter the number of adults.4
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+Traceback (most recent call last):
+  File "main.py", line 14, in <module>
+    bot.report_results()
+  File "C:\Users\priya\Desktop\Coding\booking-bot\Bot\booking.py", line 84, in report_results
+    table.add_rows(report.get_deal_attributes())
+  File "C:\Users\priya\Desktop\Coding\booking-bot\Bot\booking_report.py", line 21, in get_deal_attributes
+    hotel_score = deal_box.find_elements(By.CLASS_NAME, "_9c5f726ff")
+  File "C:\Users\priya\anaconda3\lib\site-packages\selenium\webdriver\remote\webelement.py", line 684, in find_elements
+    return self._execute(Command.FIND_CHILD_ELEMENTS,
+  File "C:\Users\priya\anaconda3\lib\site-packages\selenium\webdriver\remote\webelement.py", line 633, in _execute
+    return self._parent.execute(command, params)
+  File "C:\Users\priya\anaconda3\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 319, in execute
+    response = self.command_executor.execute(driver_command, params)
+  File "C:\Users\priya\anaconda3\lib\site-packages\selenium\webdriver\remote\remote_connection.py", line 374, in execute
+    return self._request(command_info[0], url, body=data)
+  File "C:\Users\priya\anaconda3\lib\site-packages\selenium\webdriver\remote\remote_connection.py", line 397, in _request
+    resp = self._conn.request(method, url, body=body, headers=headers)
+  File "C:\Users\priya\anaconda3\lib\site-packages\urllib3\request.py", line 79, in request
+    return self.request_encode_body(
+  File "C:\Users\priya\anaconda3\lib\site-packages\urllib3\request.py", line 171, in request_encode_body
+    return self.urlopen(method, url, **extra_kw)
+  File "C:\Users\priya\anaconda3\lib\site-packages\urllib3\poolmanager.py", line 336, in urlopen
+    response = conn.urlopen(method, u.request_uri, **kw)
+  File "C:\Users\priya\anaconda3\lib\site-packages\urllib3\connectionpool.py", line 670, in urlopen
+    httplib_response = self._make_request(
+  File "C:\Users\priya\anaconda3\lib\site-packages\urllib3\connectionpool.py", line 426, in _make_request
+    six.raise_from(e, None)
+  File "<string>", line 3, in raise_from
+  File "C:\Users\priya\anaconda3\lib\site-packages\urllib3\connectionpool.py", line 421, in _make_request
+    httplib_response = conn.getresponse()
+  File "C:\Users\priya\anaconda3\lib\http\client.py", line 1347, in getresponse
+    response.begin()
+  File "C:\Users\priya\anaconda3\lib\http\client.py", line 307, in begin
+    version, status, reason = self._read_status()
+  File "C:\Users\priya\anaconda3\lib\http\client.py", line 268, in _read_status
+    line = str(self.fp.readline(_MAXLINE + 1), "iso-8859-1")
+  File "C:\Users\priya\anaconda3\lib\socket.py", line 669, in readinto
+    return self._sock.recv_into(b)
+KeyboardInterrupt
+^C
+(base) C:\Users\priya\Desktop\Coding\booking-bot>python main.py
+Where do you wish to go (city name: New York, Ooty etc)?Ooty
+Please enter your check-in date (YYYY-MM-DD).2021-12-12
+Please enter your check-in date (YYYY-MM-DD).2021-12-14
+Enter the number of adults.4
+69
+69
+69
+69
+69
+69
+69
+69
+69
+69
+69
+69
+69
+69
+69
+69
+69
+69
+69
+69
+Traceback (most recent call last):
+  File "main.py", line 14, in <module>
+    bot.report_results()
+  File "C:\Users\priya\Desktop\Coding\booking-bot\Bot\booking.py", line 84, in report_results
+    table.add_rows(report.get_deal_attributes())
+  File "C:\Users\priya\Desktop\Coding\booking-bot\Bot\booking_report.py", line 21, in get_deal_attributes
+    hotel_score = deal_box.find_elements(By.CLASS_NAME, "_9c5f726ff")[0].get_attribute('outerHTML')
+  File "C:\Users\priya\anaconda3\lib\site-packages\selenium\webdriver\remote\webelement.py", line 684, in find_elements
+    return self._execute(Command.FIND_CHILD_ELEMENTS,
+  File "C:\Users\priya\anaconda3\lib\site-packages\selenium\webdriver\remote\webelement.py", line 633, in _execute
+    return self._parent.execute(command, params)
+  File "C:\Users\priya\anaconda3\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 319, in execute
+    response = self.command_executor.execute(driver_command, params)
+  File "C:\Users\priya\anaconda3\lib\site-packages\selenium\webdriver\remote\remote_connection.py", line 374, in execute
+    return self._request(command_info[0], url, body=data)
+  File "C:\Users\priya\anaconda3\lib\site-packages\selenium\webdriver\remote\remote_connection.py", line 397, in _request
+    resp = self._conn.request(method, url, body=body, headers=headers)
+  File "C:\Users\priya\anaconda3\lib\site-packages\urllib3\request.py", line 79, in request
+    return self.request_encode_body(
+  File "C:\Users\priya\anaconda3\lib\site-packages\urllib3\request.py", line 171, in request_encode_body
+    return self.urlopen(method, url, **extra_kw)
+  File "C:\Users\priya\anaconda3\lib\site-packages\urllib3\poolmanager.py", line 336, in urlopen
+    response = conn.urlopen(method, u.request_uri, **kw)
+  File "C:\Users\priya\anaconda3\lib\site-packages\urllib3\connectionpool.py", line 670, in urlopen
+    httplib_response = self._make_request(
+  File "C:\Users\priya\anaconda3\lib\site-packages\urllib3\connectionpool.py", line 426, in _make_request
+    six.raise_from(e, None)
+  File "<string>", line 3, in raise_from
+  File "C:\Users\priya\anaconda3\lib\site-packages\urllib3\connectionpool.py", line 421, in _make_request
+    httplib_response = conn.getresponse()
+  File "C:\Users\priya\anaconda3\lib\http\client.py", line 1347, in getresponse
+    response.begin()
+  File "C:\Users\priya\anaconda3\lib\http\client.py", line 307, in begin
+    version, status, reason = self._read_status()
+  File "C:\Users\priya\anaconda3\lib\http\client.py", line 268, in _read_status
+    line = str(self.fp.readline(_MAXLINE + 1), "iso-8859-1")
+  File "C:\Users\priya\anaconda3\lib\socket.py", line 669, in readinto
+    return self._sock.recv_into(b)
+KeyboardInterrupt
+^C
+(base) C:\Users\priya\Desktop\Coding\booking-bot>python main.py
+Where do you wish to go (city name: New York, Ooty etc)?Ooty
+Please enter your check-in date (YYYY-MM-DD).2021-12-12
+Please enter your check-in date (YYYY-MM-DD).2021-12-14
+Enter the number of adults.4
+<div aria-label="Scored 8.8 " class="_9c5f726ff bd528f9ea6">8.8</div>
+Traceback (most recent call last):
+  File "main.py", line 14, in <module>
+    bot.report_results()
+  File "C:\Users\priya\Desktop\Coding\booking-bot\Bot\booking.py", line 84, in report_results
+    table.add_rows(report.get_deal_attributes())
+  File "C:\Users\priya\Desktop\Coding\booking-bot\Bot\booking_report.py", line 21, in get_deal_attributes
+    hotel_score = deal_box.find_elements(By.CLASS_NAME, "_9c5f726ff")[0].get_attribute('outerHTML')
+IndexError: list index out of range
+
+(base) C:\Users\priya\Desktop\Coding\booking-bot>python main.py
+Where do you wish to go (city name: New York, Ooty etc)?Ooty
+Please enter your check-in date (YYYY-MM-DD).2021-12-12
+Please enter your check-in date (YYYY-MM-DD).2021-12-14
+Enter the number of adults.4
+<div class="_9c5f726ff _192b3a196 _fb3ba087b f1cbb919ef">Excellent</div>
+Traceback (most recent call last):
+  File "main.py", line 14, in <module>
+    bot.report_results()
+  File "C:\Users\priya\Desktop\Coding\booking-bot\Bot\booking.py", line 84, in report_results
+    table.add_rows(report.get_deal_attributes())
+  File "C:\Users\priya\Desktop\Coding\booking-bot\Bot\booking_report.py", line 21, in get_deal_attributes
+    hotel_score = deal_box.find_elements(By.CLASS_NAME, "_9c5f726ff")[1].get_attribute('outerHTML')
+IndexError: list index out of range
+
+(base) C:\Users\priya\Desktop\Coding\booking-bot>python main.py
+Where do you wish to go (city name: New York, Ooty etc)?Ooty
+Please enter your check-in date (YYYY-MM-DD).2021-12-12
+Please enter your check-in date (YYYY-MM-DD).2021-12-14
+Enter the number of adults.4
+8.8
+7.1
+8.3
+8.4
+7.9
+9.1
+7.6
+7.9
+7.7
+8.2
+8.7
+7.7
+8.1
+7.4
+7.9
+7.4
+6.4
+7.5
+5.9
+7.7
+9.4
+7.4
+9.7
+0
+Traceback (most recent call last):
+  File "main.py", line 14, in <module>
+    bot.report_results()
+  File "C:\Users\priya\Desktop\Coding\booking-bot\Bot\booking.py", line 84, in report_results
+    table.add_rows(report.get_deal_attributes())
+  File "C:\Users\priya\Desktop\Coding\booking-bot\Bot\booking_report.py", line 22, in get_deal_attributes
+    hotel_score_element = deal_box.find_elements(By.CLASS_NAME, "_9c5f726ff")
+  File "C:\Users\priya\anaconda3\lib\site-packages\selenium\webdriver\remote\webelement.py", line 684, in find_elements
+    return self._execute(Command.FIND_CHILD_ELEMENTS,
+  File "C:\Users\priya\anaconda3\lib\site-packages\selenium\webdriver\remote\webelement.py", line 633, in _execute
+    return self._parent.execute(command, params)
+  File "C:\Users\priya\anaconda3\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 319, in execute
+    response = self.command_executor.execute(driver_command, params)
+  File "C:\Users\priya\anaconda3\lib\site-packages\selenium\webdriver\remote\remote_connection.py", line 374, in execute
+    return self._request(command_info[0], url, body=data)
+  File "C:\Users\priya\anaconda3\lib\site-packages\selenium\webdriver\remote\remote_connection.py", line 397, in _request
+    resp = self._conn.request(method, url, body=body, headers=headers)
+  File "C:\Users\priya\anaconda3\lib\site-packages\urllib3\request.py", line 79, in request
+    return self.request_encode_body(
+  File "C:\Users\priya\anaconda3\lib\site-packages\urllib3\request.py", line 171, in request_encode_body
+    return self.urlopen(method, url, **extra_kw)
+  File "C:\Users\priya\anaconda3\lib\site-packages\urllib3\poolmanager.py", line 336, in urlopen
+    response = conn.urlopen(method, u.request_uri, **kw)
+  File "C:\Users\priya\anaconda3\lib\site-packages\urllib3\connectionpool.py", line 670, in urlopen
+    httplib_response = self._make_request(
+  File "C:\Users\priya\anaconda3\lib\site-packages\urllib3\connectionpool.py", line 426, in _make_request
+    six.raise_from(e, None)
+  File "<string>", line 3, in raise_from
+  File "C:\Users\priya\anaconda3\lib\site-packages\urllib3\connectionpool.py", line 421, in _make_request
+    httplib_response = conn.getresponse()
+  File "C:\Users\priya\anaconda3\lib\http\client.py", line 1347, in getresponse
+    response.begin()
+  File "C:\Users\priya\anaconda3\lib\http\client.py", line 307, in begin
+    version, status, reason = self._read_status()
+  File "C:\Users\priya\anaconda3\lib\http\client.py", line 268, in _read_status
+    line = str(self.fp.readline(_MAXLINE + 1), "iso-8859-1")
+  File "C:\Users\priya\anaconda3\lib\socket.py", line 669, in readinto
+    return self._sock.recv_into(b)
+KeyboardInterrupt
+^C
+(base) C:\Users\priya\Desktop\Coding\booking-bot>python main.py
+Where do you wish to go (city name: New York, Ooty etc)?Ooty
+Please enter your check-in date (YYYY-MM-DD).2021-12-12
+Please enter your check-in date (YYYY-MM-DD).2021-12-14
+Enter the number of adults.4
++--------------------------------------------+-------------+-------------+
+|                 Hotel Name                 | Hotel Price | Hotel Score |
++--------------------------------------------+-------------+-------------+
+|               Beverly villa                |    US$133   |     8.8     |
+| Treebo Trend Skydale Inn &amp; Suites Ooty |    US$224   |     7.1     |
+|         Ganga's Sri Balaji Cottage         |    US$53    |     8.3     |
+|             Astoria Residency              |    US$107   |     8.4     |
+|       Leopard Rock Wilderness Resort       |    US$200   |     7.9     |
+|               Planters Punch               |    US$200   |     9.1     |
+|           Treebo Trip Bellflower           |    US$112   |     7.6     |
+|               The Red House                |    US$127   |     7.9     |
+|              Fortune Retreats              |    US$133   |     7.7     |
+|       GREEN CASA OOTY(FAMILIES ONLY)       |    US$119   |     8.2     |
+|            Pine View Stay Ooty             |    US$267   |     8.7     |
+|             Rosepark Residency             |    US$112   |     7.7     |
+|               Nook Residency               |    US$147   |     8.1     |
+|                Delightz Inn                |    US$248   |     7.4     |
+|             Hotel City Palace              |    US$34    |     7.9     |
+|           Mountain View cottage            |    US$40    |     7.4     |
+|                mystique inn                |    US$29    |     6.4     |
+|     falcon cottage -Individual cottage     |    US$67    |     7.5     |
+|         Tulips Valley View Resorts         |    US$84    |     5.9     |
+|              Drizzle Drop Inn              |    US$61    |     7.7     |
+|             Little House Ooty              |    US$135   |     9.4     |
+|                STAY AWHILE                 |    US$40    |     7.4     |
+|   Nature View Cottage-Individual Cottage   |    US$53    |     9.7     |
+|               VPR RESIDENCY                |    US$40    |      0      |
+|                  Grandaf                   |    US$106   |      0      |
++--------------------------------------------+-------------+-------------+
+Exiting...
+
+(base) C:\Users\priya\Desktop\Coding\booking-bot>python main.py
+Where do you wish to go (city name: New York, Ooty etc)?New York
+Please enter your check-in date (YYYY-MM-DD).2021-12-12
+Please enter your check-in date (YYYY-MM-DD).2021-12-14
+Enter the number of adults.4
++-----------------------------------------------------------------+-------------+-------------+
+|                            Hotel Name                           | Hotel Price | Hotel Score |
++-----------------------------------------------------------------+-------------+-------------+
+|      Holiday Inn Manhattan Financial District, an IHG Hotel     |    US$404   |     8.1     |
+|            Hotel Indigo Lower East Side, an IHG Hotel           |    US$524   |     8.1     |
+|       EVEN Hotel New York Times Square South, an IHG Hotel      |    US$776   |     8.7     |
+|                         The Square Hotel                        |    US$503   |     7.4     |
+|                       Sonder at One Platt                       |    US$580   |     8.2     |
+|                          Bentley Hotel                          |    US$517   |     7.5     |
+|                      The Marcel at Gramercy                     |    US$603   |     8.0     |
+|                        Ace Hotel New York                       |    US$590   |     8.3     |
+|                        Freehand New York                        |    US$675   |     8.4     |
+|                    Hotel Edison Times Square                    |    US$468   |     7.7     |
+|                      Radio City Apartments                      |    US$775   |     8.6     |
+|                    Ameritania at Times Square                   |    US$575   |     8.1     |
+|         Doubletree By Hilton New York Times Square West         |    US$587   |     7.1     |
+|                       The Belvedere Hotel                       |    US$448   |     8.3     |
+|             Courtyard by Marriott Times Square West             |    US$538   |     8.5     |
+|                         Warwick New York                        |    US$585   |     8.0     |
+|              DoubleTree by Hilton New York Downtown             |    US$534   |     7.7     |
+|                        Royalton New York                        |    US$789   |     8.0     |
+| Hampton by Hilton Manhattan 35th Street - Empire State Building |    US$563   |     8.3     |
+|                    The Hotel at Times Square                    |    US$432   |     8.0     |
+|                 The New Yorker, A Wyndham Hotel                 |    US$406   |     7.8     |
+|            Four Points by Sheraton New York Downtown            |    US$463   |     7.6     |
+|              Hyatt Place New York City/Times Square             |    US$538   |     7.8     |
+|                Executive Hotel Le Soleil New York               |    US$521   |     8.4     |
+|    Hilton Garden Inn NYC Financial Center/Manhattan Downtown    |    US$576   |     8.8     |
+|                     Hotel Mela Times Square                     |    US$468   |     7.4     |
+|               M Social Hotel Times Square New York              |    US$695   |     8.5     |
++-----------------------------------------------------------------+-------------+-------------+
+Exiting...
+
 (base) C:\Users\priya\Desktop\Coding\booking-bot>
+

@@ -1,0 +1,43 @@
+Folder PATH listing for volume Acer
+Volume serial number is 0AA9-97AB
+C:.
+|   main.py
+|   tree.txt
+|   
++---.idea
+|   |   .gitignore
+|   |   Automation.iml
+|   |   misc.xml
+|   |   modules.xml
+|   |   vcs.xml
+|   |   workspace.xml
+|   |   
+|   +---codeStyles
+|   |       codeStyleConfig.xml
+|   |       
+|   \---inspectionProfiles
+|           profiles_settings.xml
+|           
++---Bot
+|   |   booking.py
+|   |   booking_filtration.py
+|   |   booking_report.py
+|   |   constants.py
+|   |   __init__.py
+|   |   
+|   \---__pycache__
+|           booking.cpython-38.pyc
+|           booking.cpython-39.pyc
+|           booking_filtration.cpython-38.pyc
+|           booking_filtration.cpython-39.pyc
+|           booking_report.cpython-38.pyc
+|           constants.cpython-38.pyc
+|           constants.cpython-39.pyc
+|           __init__.cpython-38.pyc
+|           __init__.cpython-39.pyc
+|           
+\---help
+        pip_show.png
+        refactoring_html.png
+        terminal_output.txt
+        
