@@ -15,10 +15,13 @@ class BookingReport:
     def get_deal_attributes(self):
         collection = []
         for deal_box in self.deal_boxes:
+            hotel_score = 0
             hotel_name = deal_box.find_element(By.CLASS_NAME, '_c445487e2').get_attribute('innerHTML').strip() # Hotel name
             hotel_price_html = deal_box.find_element(By.CLASS_NAME, '_e885fdc12').get_attribute('innerHTML')
             hotel_price = hotel_price_html.replace("&nbsp", "")
-            hotel_score = deal_box.find_element(By.CLASS_NAME, 'bd528f9ea6').get_attribute('innerHTML')
+            hotel_score_element = deal_box.find_elements(By.CLASS_NAME, "_9c5f726ff")
+            if len(hotel_score_element) > 0:
+                hotel_score = hotel_score_element[0].get_attribute('innerHTML')
 
             collection.append([hotel_name, hotel_price, hotel_score])
         return collection

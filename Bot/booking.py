@@ -62,6 +62,7 @@ class Booking(webdriver.Chrome):
                 break
 
         increase_adults = self.find_elements(By.CSS_SELECTOR, 'button[aria-label="Increase number of Adults"]')
+        count = int(count)
         for i in range(1, count):
             increase_adults[0].click()
 

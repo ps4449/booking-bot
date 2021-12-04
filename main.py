@@ -4,12 +4,13 @@ try:
     with Booking() as bot:
         bot.first_page()
         bot.change_currency(currency='USD')
-        bot.select_place("New York")
-        bot.select_dates(checkin='2021-12-12', checkout='2021-12-14')
-        bot.select_members(5)
+        bot.select_place(input("Where do you wish to go (city name: New York, Ooty etc)? "))
+        bot.select_dates(checkin=input("Please enter your check-in date (YYYY-MM-DD). "),
+                         checkout=input("Please enter your check-in date (YYYY-MM-DD). "))
+        bot.select_members(input("Enter the number of adults. "))
         bot.click_search()
         bot.apply_filtration()
-        bot.refresh() # data will be grabbed properly, as shown on screen
+        bot.refresh()  # data will be grabbed properly, as shown on screen
         bot.report_results()
 
         print("Exiting...")
