@@ -9,6 +9,8 @@ try:
         bot.select_members(5)
         bot.click_search()
         bot.apply_filtration()
+        bot.refresh() # data will be grabbed properly, as shown on screen
+        bot.report_results()
 
         print("Exiting...")
 

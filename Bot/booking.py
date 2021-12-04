@@ -3,6 +3,8 @@ import Bot.constants as const
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from Bot.booking_filtration import BookingFiltration
+from Bot.booking_report import BookingReport
+from prettytable import PrettyTable
 
 
 class Booking(webdriver.Chrome):
@@ -69,5 +71,14 @@ class Booking(webdriver.Chrome):
 
     def apply_filtration(self):
         filtration = BookingFiltration(driver=self)
-        filtration.apply_star_rating(3, 4, 5)
-        filtration.sort_price_lowest_first()
+        # filtration.apply_star_rating(3, 4, 5)
+        # filtration.sort_price_lowest_first()
+
+    def report_results(self):
+        hotel_boxes = self.find_element(By.ID, 'search_results_table')
+        report = BookingReport(hotel_boxes)
+        table = PrettyTable(
+            field_names=["Hotel Name", "Hotel Price", "Hotel Score"]
+        )
+        table.add_rows(report.get_deal_attributes())
+        print(table)

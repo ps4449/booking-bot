@@ -1,0 +1,594 @@
+Microsoft Windows [Version 10.0.19043.1348]
+(c) Microsoft Corporation. All rights reserved.
+
+(base) C:\Users\priya\Desktop\Coding\booking-bot>conda activate
+
+(base) C:\Users\priya\Desktop\Coding\booking-bot>main.py
+
+(base) C:\Users\priya\Desktop\Coding\booking-bot>python main.py
+Traceback (most recent call last):
+  File "main.py", line 4, in <module>
+    with Booking() as bot:
+  File "C:\Users\priya\Desktop\Coding\booking-bot\Bot\booking.py", line 13, in __init__
+    options.add_experimental_option()
+TypeError: add_experimental_option() missing 2 required positional arguments: 'name' and 'value'
+
+(base) C:\Users\priya\Desktop\Coding\booking-bot>python main.py
+You are trying to run the bot from command line.
+Please add your Selenium drivers to PATH.
+For Windows:
+         set PATH=%PATH%;C:path-to-your-driver
+
+For Linux:
+         PATH=$PATH:/path/to-your/folder/
+
+
+(base) C:\Users\priya\Desktop\Coding\booking-bot>set PATH=%PATH%;C:\SeleniumDrivers
+
+(base) C:\Users\priya\Desktop\Coding\booking-bot>python main.py
+You are trying to run the bot from command line.
+Please add your Selenium drivers to PATH.
+For Windows:
+         set PATH=%PATH%;C:path-to-your-driver
+
+For Linux:
+         PATH=$PATH:/path/to-your/folder/
+
+
+(base) C:\Users\priya\Desktop\Coding\booking-bot>set PATH=%PATH%;C:\SeleniumDrivers\
+
+(base) C:\Users\priya\Desktop\Coding\booking-bot>python main.py
+
+DevTools listening on ws://127.0.0.1:59430/devtools/browser/8b982af6-57c1-4c66-9e6f-10a8bd33fd5d
+Traceback (most recent call last):
+  File "main.py", line 4, in <module>
+    with Booking() as bot:
+  File "C:\Users\priya\Desktop\Coding\booking-bot\Bot\booking.py", line 14, in __init__
+    super(Booking, self).__init__()
+  File "C:\Users\priya\anaconda3\lib\site-packages\selenium\webdriver\chrome\webdriver.py", line 76, in __init__
+    RemoteWebDriver.__init__(
+  File "C:\Users\priya\anaconda3\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 157, in __init__
+    self.start_session(capabilities, browser_profile)
+  File "C:\Users\priya\anaconda3\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 252, in start_session
+    response = self.execute(Command.NEW_SESSION, parameters)
+  File "C:\Users\priya\anaconda3\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 321, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\priya\anaconda3\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 242, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.SessionNotCreatedException: Message: session not created: This version of ChromeDriver only supports Chrome version 92
+Current browser version is 95.0.4638.69 with binary path C:\Program Files\Google\Chrome\Application\chrome.exe
+
+
+(base) C:\Users\priya\Desktop\Coding\booking-bot>set PATH=%PATH%;C:\SeleniumDrivers\
+
+(base) C:\Users\priya\Desktop\Coding\booking-bot>python main.py
+
+DevTools listening on ws://127.0.0.1:51581/devtools/browser/678f0af1-b77d-4cf3-bdb2-c7fd59810bf7
+[1568:38532:1204/033015.967:ERROR:chrome_browser_main_extra_parts_metrics.cc(230)] crbug.com/1216328: Checking Bluetooth availability started. Please report if there is no report that this ends.
+[1568:38532:1204/033015.968:ERROR:chrome_browser_main_extra_parts_metrics.cc(233)] crbug.com/1216328: Checking Bluetooth availability ended.
+[1568:38532:1204/033015.970:ERROR:chrome_browser_main_extra_parts_metrics.cc(236)] crbug.com/1216328: Checking default browser status started. Please report if there is no report that this ends.
+[1568:41920:1204/033015.971:ERROR:device_event_log_impl.cc(214)] [03:30:15.971] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: A device attached to the system is not functioning. (0x1F)
+[1568:38532:1204/033015.987:ERROR:chrome_browser_main_extra_parts_metrics.cc(240)] crbug.com/1216328: Checking default browser status ended.
+Traceback (most recent call last):
+  File "main.py", line 8, in <module>
+    bot.select_dates(checkin='2021-10-07', checkout='2021-10-10')
+  File "C:\Users\priya\Desktop\Coding\booking-bot\Bot\booking.py", line 50, in select_dates
+    checkin[0].click()
+IndexError: list index out of range
+
+(base) C:\Users\priya\Desktop\Coding\booking-bot>set PATH=%PATH%;C:\SeleniumDrivers\
+
+(base) C:\Users\priya\Desktop\Coding\booking-bot>python main.py
+Traceback (most recent call last):
+  File "main.py", line 8, in <module>
+    bot.select_dates(checkin='2021-10-12', checkout='2021-10-14')
+  File "C:\Users\priya\Desktop\Coding\booking-bot\Bot\booking.py", line 50, in select_dates
+    checkin[0].click()
+IndexError: list index out of range
+
+(base) C:\Users\priya\Desktop\Coding\booking-bot>python main.py
+Traceback (most recent call last):
+  File "main.py", line 11, in <module>
+    bot.apply_filtration()
+  File "C:\Users\priya\Desktop\Coding\booking-bot\Bot\booking.py", line 87, in apply_filtration
+    filtration.apply_star_rating(3, 4, 5)
+  File "C:\Users\priya\Desktop\Coding\booking-bot\Bot\booking_filtration.py", line 10, in apply_star_rating
+    star_element = star_rating_box.find_elements_by_css_selector('*')
+AttributeError: 'NoneType' object has no attribute 'find_elements_by_css_selector'
+
+(base) C:\Users\priya\Desktop\Coding\booking-bot>python main.py
+Traceback (most recent call last):
+  File "main.py", line 11, in <module>
+    bot.apply_filtration()
+  File "C:\Users\priya\Desktop\Coding\booking-bot\Bot\booking.py", line 87, in apply_filtration
+    filtration.apply_star_rating(3, 4, 5)
+  File "C:\Users\priya\Desktop\Coding\booking-bot\Bot\booking_filtration.py", line 10, in apply_star_rating
+    star_rating_box = self.driver.find_element(By.ID, 'filter_class')
+  File "C:\Users\priya\anaconda3\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 976, in find_element
+    return self.execute(Command.FIND_ELEMENT, {
+  File "C:\Users\priya\anaconda3\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 321, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\priya\anaconda3\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 242, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {"method":"css selector","selector":"[id="filter_class"]"}
+  (Session info: chrome=95.0.4638.69)
+
+
+(base) C:\Users\priya\Desktop\Coding\booking-bot>python main.py
+Traceback (most recent call last):
+  File "main.py", line 11, in <module>
+    bot.apply_filtration()
+  File "C:\Users\priya\Desktop\Coding\booking-bot\Bot\booking.py", line 74, in apply_filtration
+    filtration.report_results()
+  File "C:\Users\priya\Desktop\Coding\booking-bot\Bot\booking_filtration.py", line 25, in report_results
+    hotel_boxes = self.driver.find_element(By.ID, 'search-results-table').find_elements(By.CLASS_NAME,
+  File "C:\Users\priya\anaconda3\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 976, in find_element
+    return self.execute(Command.FIND_ELEMENT, {
+  File "C:\Users\priya\anaconda3\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 321, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\priya\anaconda3\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 242, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {"method":"css selector","selector":"[id="search-results-table"]"}
+  (Session info: chrome=95.0.4638.69)
+
+
+(base) C:\Users\priya\Desktop\Coding\booking-bot>python main.py
+0
+Exiting...
+
+(base) C:\Users\priya\Desktop\Coding\booking-bot>python main.py
+Traceback (most recent call last):
+  File "main.py", line 12, in <module>
+    print(len(bot.report_results()))
+AttributeError: 'Booking' object has no attribute 'report_results'
+
+(base) C:\Users\priya\Desktop\Coding\booking-bot>set PATH=%PATH%;C:\SeleniumDrivers\
+
+(base) C:\Users\priya\Desktop\Coding\booking-bot>python main.py
+Traceback (most recent call last):
+  File "main.py", line 12, in <module>
+    print(len(bot.report_results()))
+  File "C:\Users\priya\Desktop\Coding\booking-bot\Bot\booking.py", line 76, in report_results
+    hotel_boxes = self.driver.find_element(By.ID, 'search_results_table').find_elements(By.CLASS_NAME,
+AttributeError: 'Booking' object has no attribute 'driver'
+
+(base) C:\Users\priya\Desktop\Coding\booking-bot>python main.py
+0
+Exiting...
+
+(base) C:\Users\priya\Desktop\Coding\booking-bot>python main.py
+27
+Exiting...
+
+(base) C:\Users\priya\Desktop\Coding\booking-bot>python main.py
+0
+Exiting...
+
+(base) C:\Users\priya\Desktop\Coding\booking-bot>python main.py
+Traceback (most recent call last):
+  File "main.py", line 12, in <module>
+    print(len(bot.report_results()))
+TypeError: object of type 'WebElement' has no len()
+
+(base) C:\Users\priya\Desktop\Coding\booking-bot>python main.py
+25
+Exiting...
+
+(base) C:\Users\priya\Desktop\Coding\booking-bot>python main.py
+Traceback (most recent call last):
+  File "main.py", line 12, in <module>
+    bot.report_results()
+  File "C:\Users\priya\Desktop\Coding\booking-bot\Bot\booking.py", line 80, in report_results
+    report.get_hotel_titles()
+  File "C:\Users\priya\Desktop\Coding\booking-bot\Bot\booking_report.py", line 17, in get_hotel_titles
+    hotel_name = deal_box.find_element(By.CLASS_NAME, 'fde444d7ef _c445487e2').get_attribute('innerHTML').strip()
+  File "C:\Users\priya\anaconda3\lib\site-packages\selenium\webdriver\remote\webelement.py", line 658, in find_element
+    return self._execute(Command.FIND_CHILD_ELEMENT,
+  File "C:\Users\priya\anaconda3\lib\site-packages\selenium\webdriver\remote\webelement.py", line 633, in _execute
+    return self._parent.execute(command, params)
+  File "C:\Users\priya\anaconda3\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 321, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\priya\anaconda3\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 242, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {"method":"css selector","selector":".fde444d7ef _c445487e2"}
+  (Session info: chrome=95.0.4638.69)
+
+
+(base) C:\Users\priya\Desktop\Coding\booking-bot>python main.py
+Hotel Edison Times Square
+Stewart Hotel
+Sohotel
+Hyatt Grand Central New York
+Radio City Apartments
+Hyatt Place New York/Midtown-South
+Courtyard New York Manhattan/Midtown East
+San Carlos Hotel New York
+Heritage Hotel New York City
+Best Western Plus Hospitality House Suites
+Front &amp; Wall Street, Operated by WhyHotel
+Homewood Suites Midtown Manhattan Times Square South
+Residence Inn by Marriott New York Downtown Manhattan/World Trade Center Area
+Hotel 57
+The Time New York
+TRYP by Wyndham Times Square South
+The Kitano Hotel New York
+The James New York - NoMad
+New York Hilton Midtown
+Fifty Hotel &amp; Suites by Affinia
+Hotel Beacon
+Gardens Suites Hotel by Affinia
+The Whitby Hotel
+City Club Hotel
+JW Marriott Essex House New York
+Exiting...
+
+(base) C:\Users\priya\Desktop\Coding\booking-bot>pip install lxml
+Requirement already satisfied: lxml in c:\users\priya\anaconda3\lib\site-packages (4.6.1)
+
+(base) C:\Users\priya\Desktop\Coding\booking-bot>pip install lxml.html
+ERROR: Could not find a version that satisfies the requirement lxml.html (from versions: none)
+ERROR: No matching distribution found for lxml.html
+
+(base) C:\Users\priya\Desktop\Coding\booking-bot>pip install lxml==4.2.5
+Collecting lxml==4.2.5
+  Downloading lxml-4.2.5.tar.gz (4.4 MB)
+     |████████████████████████████████| 4.4 MB ...
+  Preparing metadata (setup.py) ... done
+Building wheels for collected packages: lxml
+  Building wheel for lxml (setup.py) ... error
+  ERROR: Command errored out with exit status 1:
+   command: 'c:\users\priya\anaconda3\python.exe' -u -c 'import io, os, sys, setuptools, tokenize; sys.argv[0] = '"'"'C:\\Users\\priya\\AppData\\Local\\Temp\\pip-install-g42k165c\\lxml_9b86cde57b0146aa902978b6850ba4fb\\setup.py'"'"';
+ __file__='"'"'C:\\Users\\priya\\AppData\\Local\\Temp\\pip-install-g42k165c\\lxml_9b86cde57b0146aa902978b6850ba4fb\\setup.py'"'"';f = getattr(tokenize, '"'"'open'"'"', open)(__file__) if os.path.exists(__file__) else io.StringIO('"'"
+'from setuptools import setup; setup()'"'"');code = f.read().replace('"'"'\r\n'"'"', '"'"'\n'"'"');f.close();exec(compile(code, __file__, '"'"'exec'"'"'))' bdist_wheel -d 'C:\Users\priya\AppData\Local\Temp\pip-wheel-tuex4m4c'
+       cwd: C:\Users\priya\AppData\Local\Temp\pip-install-g42k165c\lxml_9b86cde57b0146aa902978b6850ba4fb\
+  Complete output (77 lines):
+  Building lxml version 4.2.5.
+  Building without Cython.
+  ERROR: b"'xslt-config' is not recognized as an internal or external command,\r\noperable program or batch file.\r\n"
+  ** make sure the development packages of libxml2 and libxslt are installed **
+  
+  Using build configuration of libxslt
+  running bdist_wheel
+  running build
+  running build_py
+  creating build
+  creating build\lib.win-amd64-3.8
+  creating build\lib.win-amd64-3.8\lxml
+  copying src\lxml\builder.py -> build\lib.win-amd64-3.8\lxml
+  copying src\lxml\cssselect.py -> build\lib.win-amd64-3.8\lxml
+  copying src\lxml\doctestcompare.py -> build\lib.win-amd64-3.8\lxml
+  copying src\lxml\ElementInclude.py -> build\lib.win-amd64-3.8\lxml
+  copying src\lxml\pyclasslookup.py -> build\lib.win-amd64-3.8\lxml
+  copying src\lxml\sax.py -> build\lib.win-amd64-3.8\lxml
+  copying src\lxml\usedoctest.py -> build\lib.win-amd64-3.8\lxml
+  copying src\lxml\_elementpath.py -> build\lib.win-amd64-3.8\lxml
+  copying src\lxml\__init__.py -> build\lib.win-amd64-3.8\lxml
+  creating build\lib.win-amd64-3.8\lxml\includes
+  copying src\lxml\includes\__init__.py -> build\lib.win-amd64-3.8\lxml\includes
+  creating build\lib.win-amd64-3.8\lxml\html
+  copying src\lxml\html\builder.py -> build\lib.win-amd64-3.8\lxml\html
+  copying src\lxml\html\clean.py -> build\lib.win-amd64-3.8\lxml\html
+  copying src\lxml\html\defs.py -> build\lib.win-amd64-3.8\lxml\html
+  copying src\lxml\html\diff.py -> build\lib.win-amd64-3.8\lxml\html
+  copying src\lxml\html\ElementSoup.py -> build\lib.win-amd64-3.8\lxml\html
+  copying src\lxml\html\formfill.py -> build\lib.win-amd64-3.8\lxml\html
+  copying src\lxml\html\html5parser.py -> build\lib.win-amd64-3.8\lxml\html
+  copying src\lxml\html\soupparser.py -> build\lib.win-amd64-3.8\lxml\html
+  copying src\lxml\html\usedoctest.py -> build\lib.win-amd64-3.8\lxml\html
+  copying src\lxml\html\_diffcommand.py -> build\lib.win-amd64-3.8\lxml\html
+  copying src\lxml\html\_html5builder.py -> build\lib.win-amd64-3.8\lxml\html
+  copying src\lxml\html\_setmixin.py -> build\lib.win-amd64-3.8\lxml\html
+  copying src\lxml\html\__init__.py -> build\lib.win-amd64-3.8\lxml\html
+  creating build\lib.win-amd64-3.8\lxml\isoschematron
+  copying src\lxml\isoschematron\__init__.py -> build\lib.win-amd64-3.8\lxml\isoschematron
+  copying src\lxml\etree.h -> build\lib.win-amd64-3.8\lxml
+  copying src\lxml\etree_api.h -> build\lib.win-amd64-3.8\lxml
+  copying src\lxml\lxml.etree.h -> build\lib.win-amd64-3.8\lxml
+  copying src\lxml\lxml.etree_api.h -> build\lib.win-amd64-3.8\lxml
+  copying src\lxml\includes\c14n.pxd -> build\lib.win-amd64-3.8\lxml\includes
+  copying src\lxml\includes\config.pxd -> build\lib.win-amd64-3.8\lxml\includes
+  copying src\lxml\includes\dtdvalid.pxd -> build\lib.win-amd64-3.8\lxml\includes
+  copying src\lxml\includes\etreepublic.pxd -> build\lib.win-amd64-3.8\lxml\includes
+  copying src\lxml\includes\htmlparser.pxd -> build\lib.win-amd64-3.8\lxml\includes
+  copying src\lxml\includes\relaxng.pxd -> build\lib.win-amd64-3.8\lxml\includes
+  copying src\lxml\includes\schematron.pxd -> build\lib.win-amd64-3.8\lxml\includes
+  copying src\lxml\includes\tree.pxd -> build\lib.win-amd64-3.8\lxml\includes
+  copying src\lxml\includes\uri.pxd -> build\lib.win-amd64-3.8\lxml\includes
+  copying src\lxml\includes\xinclude.pxd -> build\lib.win-amd64-3.8\lxml\includes
+  copying src\lxml\includes\xmlerror.pxd -> build\lib.win-amd64-3.8\lxml\includes
+  copying src\lxml\includes\xmlparser.pxd -> build\lib.win-amd64-3.8\lxml\includes
+  copying src\lxml\includes\xmlschema.pxd -> build\lib.win-amd64-3.8\lxml\includes
+  copying src\lxml\includes\xpath.pxd -> build\lib.win-amd64-3.8\lxml\includes
+  copying src\lxml\includes\xslt.pxd -> build\lib.win-amd64-3.8\lxml\includes
+  copying src\lxml\includes\__init__.pxd -> build\lib.win-amd64-3.8\lxml\includes
+  copying src\lxml\includes\etree_defs.h -> build\lib.win-amd64-3.8\lxml\includes
+  copying src\lxml\includes\lxml-version.h -> build\lib.win-amd64-3.8\lxml\includes
+  creating build\lib.win-amd64-3.8\lxml\isoschematron\resources
+  creating build\lib.win-amd64-3.8\lxml\isoschematron\resources\rng
+  copying src\lxml\isoschematron\resources\rng\iso-schematron.rng -> build\lib.win-amd64-3.8\lxml\isoschematron\resources\rng
+  creating build\lib.win-amd64-3.8\lxml\isoschematron\resources\xsl
+  copying src\lxml\isoschematron\resources\xsl\RNG2Schtrn.xsl -> build\lib.win-amd64-3.8\lxml\isoschematron\resources\xsl
+  copying src\lxml\isoschematron\resources\xsl\XSD2Schtrn.xsl -> build\lib.win-amd64-3.8\lxml\isoschematron\resources\xsl
+  creating build\lib.win-amd64-3.8\lxml\isoschematron\resources\xsl\iso-schematron-xslt1
+  copying src\lxml\isoschematron\resources\xsl\iso-schematron-xslt1\iso_abstract_expand.xsl -> build\lib.win-amd64-3.8\lxml\isoschematron\resources\xsl\iso-schematron-xslt1
+  copying src\lxml\isoschematron\resources\xsl\iso-schematron-xslt1\iso_dsdl_include.xsl -> build\lib.win-amd64-3.8\lxml\isoschematron\resources\xsl\iso-schematron-xslt1
+  copying src\lxml\isoschematron\resources\xsl\iso-schematron-xslt1\iso_schematron_message.xsl -> build\lib.win-amd64-3.8\lxml\isoschematron\resources\xsl\iso-schematron-xslt1
+  copying src\lxml\isoschematron\resources\xsl\iso-schematron-xslt1\iso_schematron_skeleton_for_xslt1.xsl -> build\lib.win-amd64-3.8\lxml\isoschematron\resources\xsl\iso-schematron-xslt1
+  copying src\lxml\isoschematron\resources\xsl\iso-schematron-xslt1\iso_svrl_for_xslt1.xsl -> build\lib.win-amd64-3.8\lxml\isoschematron\resources\xsl\iso-schematron-xslt1
+  copying src\lxml\isoschematron\resources\xsl\iso-schematron-xslt1\readme.txt -> build\lib.win-amd64-3.8\lxml\isoschematron\resources\xsl\iso-schematron-xslt1
+  running build_ext
+  building 'lxml.etree' extension
+  error: Microsoft Visual C++ 14.0 or greater is required. Get it with "Microsoft C++ Build Tools": https://visualstudio.microsoft.com/visual-cpp-build-tools/
+  ----------------------------------------
+  ERROR: Failed building wheel for lxml
+  Running setup.py clean for lxml
+Failed to build lxml
+Installing collected packages: lxml
+  Attempting uninstall: lxml
+    Found existing installation: lxml 4.6.1
+    Uninstalling lxml-4.6.1:
+      Successfully uninstalled lxml-4.6.1
+    Running setup.py install for lxml ... error
+    ERROR: Command errored out with exit status 1:
+     command: 'c:\users\priya\anaconda3\python.exe' -u -c 'import io, os, sys, setuptools, tokenize; sys.argv[0] = '"'"'C:\\Users\\priya\\AppData\\Local\\Temp\\pip-install-g42k165c\\lxml_9b86cde57b0146aa902978b6850ba4fb\\setup.py'"'"
+'; __file__='"'"'C:\\Users\\priya\\AppData\\Local\\Temp\\pip-install-g42k165c\\lxml_9b86cde57b0146aa902978b6850ba4fb\\setup.py'"'"';f = getattr(tokenize, '"'"'open'"'"', open)(__file__) if os.path.exists(__file__) else io.StringIO('"
+'"'from setuptools import setup; setup()'"'"');code = f.read().replace('"'"'\r\n'"'"', '"'"'\n'"'"');f.close();exec(compile(code, __file__, '"'"'exec'"'"'))' install --record 'C:\Users\priya\AppData\Local\Temp\pip-record-78v0inlz\ins
+tall-record.txt' --single-version-externally-managed --compile --install-headers 'c:\users\priya\anaconda3\Include\lxml'
+         cwd: C:\Users\priya\AppData\Local\Temp\pip-install-g42k165c\lxml_9b86cde57b0146aa902978b6850ba4fb\
+    Complete output (77 lines):
+    Building lxml version 4.2.5.
+    Building without Cython.
+    ERROR: b"'xslt-config' is not recognized as an internal or external command,\r\noperable program or batch file.\r\n"
+    ** make sure the development packages of libxml2 and libxslt are installed **
+    
+    Using build configuration of libxslt
+    running install
+    running build
+    running build_py
+    creating build
+    creating build\lib.win-amd64-3.8
+    creating build\lib.win-amd64-3.8\lxml
+    copying src\lxml\builder.py -> build\lib.win-amd64-3.8\lxml
+    copying src\lxml\cssselect.py -> build\lib.win-amd64-3.8\lxml
+    copying src\lxml\doctestcompare.py -> build\lib.win-amd64-3.8\lxml
+    copying src\lxml\ElementInclude.py -> build\lib.win-amd64-3.8\lxml
+    copying src\lxml\pyclasslookup.py -> build\lib.win-amd64-3.8\lxml
+    copying src\lxml\sax.py -> build\lib.win-amd64-3.8\lxml
+    copying src\lxml\usedoctest.py -> build\lib.win-amd64-3.8\lxml
+    copying src\lxml\_elementpath.py -> build\lib.win-amd64-3.8\lxml
+    copying src\lxml\__init__.py -> build\lib.win-amd64-3.8\lxml
+    creating build\lib.win-amd64-3.8\lxml\includes
+    copying src\lxml\includes\__init__.py -> build\lib.win-amd64-3.8\lxml\includes
+    creating build\lib.win-amd64-3.8\lxml\html
+    copying src\lxml\html\builder.py -> build\lib.win-amd64-3.8\lxml\html
+    copying src\lxml\html\clean.py -> build\lib.win-amd64-3.8\lxml\html
+    copying src\lxml\html\defs.py -> build\lib.win-amd64-3.8\lxml\html
+    copying src\lxml\html\diff.py -> build\lib.win-amd64-3.8\lxml\html
+    copying src\lxml\html\ElementSoup.py -> build\lib.win-amd64-3.8\lxml\html
+    copying src\lxml\html\formfill.py -> build\lib.win-amd64-3.8\lxml\html
+    copying src\lxml\html\html5parser.py -> build\lib.win-amd64-3.8\lxml\html
+    copying src\lxml\html\soupparser.py -> build\lib.win-amd64-3.8\lxml\html
+    copying src\lxml\html\usedoctest.py -> build\lib.win-amd64-3.8\lxml\html
+    copying src\lxml\html\_diffcommand.py -> build\lib.win-amd64-3.8\lxml\html
+    copying src\lxml\html\_html5builder.py -> build\lib.win-amd64-3.8\lxml\html
+    copying src\lxml\html\_setmixin.py -> build\lib.win-amd64-3.8\lxml\html
+    copying src\lxml\html\__init__.py -> build\lib.win-amd64-3.8\lxml\html
+    creating build\lib.win-amd64-3.8\lxml\isoschematron
+    copying src\lxml\isoschematron\__init__.py -> build\lib.win-amd64-3.8\lxml\isoschematron
+    copying src\lxml\etree.h -> build\lib.win-amd64-3.8\lxml
+    copying src\lxml\etree_api.h -> build\lib.win-amd64-3.8\lxml
+    copying src\lxml\lxml.etree.h -> build\lib.win-amd64-3.8\lxml
+    copying src\lxml\lxml.etree_api.h -> build\lib.win-amd64-3.8\lxml
+    copying src\lxml\includes\c14n.pxd -> build\lib.win-amd64-3.8\lxml\includes
+    copying src\lxml\includes\config.pxd -> build\lib.win-amd64-3.8\lxml\includes
+    copying src\lxml\includes\dtdvalid.pxd -> build\lib.win-amd64-3.8\lxml\includes
+    copying src\lxml\includes\etreepublic.pxd -> build\lib.win-amd64-3.8\lxml\includes
+    copying src\lxml\includes\htmlparser.pxd -> build\lib.win-amd64-3.8\lxml\includes
+    copying src\lxml\includes\relaxng.pxd -> build\lib.win-amd64-3.8\lxml\includes
+    copying src\lxml\includes\schematron.pxd -> build\lib.win-amd64-3.8\lxml\includes
+    copying src\lxml\includes\tree.pxd -> build\lib.win-amd64-3.8\lxml\includes
+    copying src\lxml\includes\uri.pxd -> build\lib.win-amd64-3.8\lxml\includes
+    copying src\lxml\includes\xinclude.pxd -> build\lib.win-amd64-3.8\lxml\includes
+    copying src\lxml\includes\xmlerror.pxd -> build\lib.win-amd64-3.8\lxml\includes
+    copying src\lxml\includes\xmlparser.pxd -> build\lib.win-amd64-3.8\lxml\includes
+    copying src\lxml\includes\xmlschema.pxd -> build\lib.win-amd64-3.8\lxml\includes
+    copying src\lxml\includes\xpath.pxd -> build\lib.win-amd64-3.8\lxml\includes
+    copying src\lxml\includes\xslt.pxd -> build\lib.win-amd64-3.8\lxml\includes
+    copying src\lxml\includes\__init__.pxd -> build\lib.win-amd64-3.8\lxml\includes
+    copying src\lxml\includes\etree_defs.h -> build\lib.win-amd64-3.8\lxml\includes
+    copying src\lxml\includes\lxml-version.h -> build\lib.win-amd64-3.8\lxml\includes
+    creating build\lib.win-amd64-3.8\lxml\isoschematron\resources
+    creating build\lib.win-amd64-3.8\lxml\isoschematron\resources\rng
+    copying src\lxml\isoschematron\resources\rng\iso-schematron.rng -> build\lib.win-amd64-3.8\lxml\isoschematron\resources\rng
+    creating build\lib.win-amd64-3.8\lxml\isoschematron\resources\xsl
+    copying src\lxml\isoschematron\resources\xsl\RNG2Schtrn.xsl -> build\lib.win-amd64-3.8\lxml\isoschematron\resources\xsl
+    copying src\lxml\isoschematron\resources\xsl\XSD2Schtrn.xsl -> build\lib.win-amd64-3.8\lxml\isoschematron\resources\xsl
+    creating build\lib.win-amd64-3.8\lxml\isoschematron\resources\xsl\iso-schematron-xslt1
+    copying src\lxml\isoschematron\resources\xsl\iso-schematron-xslt1\iso_abstract_expand.xsl -> build\lib.win-amd64-3.8\lxml\isoschematron\resources\xsl\iso-schematron-xslt1
+    copying src\lxml\isoschematron\resources\xsl\iso-schematron-xslt1\iso_dsdl_include.xsl -> build\lib.win-amd64-3.8\lxml\isoschematron\resources\xsl\iso-schematron-xslt1
+    copying src\lxml\isoschematron\resources\xsl\iso-schematron-xslt1\iso_schematron_message.xsl -> build\lib.win-amd64-3.8\lxml\isoschematron\resources\xsl\iso-schematron-xslt1
+    copying src\lxml\isoschematron\resources\xsl\iso-schematron-xslt1\iso_schematron_skeleton_for_xslt1.xsl -> build\lib.win-amd64-3.8\lxml\isoschematron\resources\xsl\iso-schematron-xslt1
+    copying src\lxml\isoschematron\resources\xsl\iso-schematron-xslt1\iso_svrl_for_xslt1.xsl -> build\lib.win-amd64-3.8\lxml\isoschematron\resources\xsl\iso-schematron-xslt1
+    copying src\lxml\isoschematron\resources\xsl\iso-schematron-xslt1\readme.txt -> build\lib.win-amd64-3.8\lxml\isoschematron\resources\xsl\iso-schematron-xslt1
+    running build_ext
+    building 'lxml.etree' extension
+    error: Microsoft Visual C++ 14.0 or greater is required. Get it with "Microsoft C++ Build Tools": https://visualstudio.microsoft.com/visual-cpp-build-tools/
+    ----------------------------------------
+  Rolling back uninstall of lxml
+  Moving to c:\users\priya\anaconda3\lib\site-packages\lxml-4.6.1.dist-info\
+   from C:\Users\priya\anaconda3\Lib\site-packages\~xml-4.6.1.dist-info
+  Moving to c:\users\priya\anaconda3\lib\site-packages\lxml\
+   from C:\Users\priya\anaconda3\Lib\site-packages\~xml
+ERROR: Command errored out with exit status 1: 'c:\users\priya\anaconda3\python.exe' -u -c 'import io, os, sys, setuptools, tokenize; sys.argv[0] = '"'"'C:\\Users\\priya\\AppData\\Local\\Temp\\pip-install-g42k165c\\lxml_9b86cde57b014
+6aa902978b6850ba4fb\\setup.py'"'"'; __file__='"'"'C:\\Users\\priya\\AppData\\Local\\Temp\\pip-install-g42k165c\\lxml_9b86cde57b0146aa902978b6850ba4fb\\setup.py'"'"';f = getattr(tokenize, '"'"'open'"'"', open)(__file__) if os.path.exi
+sts(__file__) else io.StringIO('"'"'from setuptools import setup; setup()'"'"');code = f.read().replace('"'"'\r\n'"'"', '"'"'\n'"'"');f.close();exec(compile(code, __file__, '"'"'exec'"'"'))' install --record 'C:\Users\priya\AppData\L
+ocal\Temp\pip-record-78v0inlz\install-record.txt' --single-version-externally-managed --compile --install-headers 'c:\users\priya\anaconda3\Include\lxml' Check the logs for full command output.
+
+(base) C:\Users\priya\Desktop\Coding\booking-bot>pip install lxml==4.6.1
+Requirement already satisfied: lxml==4.6.1 in c:\users\priya\anaconda3\lib\site-packages (4.6.1)
+
+(base) C:\Users\priya\Desktop\Coding\booking-bot>setuptools --version
+'setuptools' is not recognized as an internal or external command,
+operable program or batch file.
+
+(base) C:\Users\priya\Desktop\Coding\booking-bot>pip install setuptools
+Requirement already satisfied: setuptools in c:\users\priya\anaconda3\lib\site-packages (50.3.1.post20201107)
+
+(base) C:\Users\priya\Desktop\Coding\booking-bot>python3.9 -m pip list
+WARNING: You are using pip version 21.2.4; however, version 21.3.1 is available.
+You should consider upgrading via the 'C:\Users\priya\AppData\Local\Microsoft\WindowsApps\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\python.exe -m pip install --upgrade pip' command.
+
+(base) C:\Users\priya\Desktop\Coding\booking-bot>C:\Users\priya\AppData\Local\Microsoft\WindowsApps\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\python.exe -m pip install --upgrade pip
+Requirement already satisfied: pip in c:\program files\windowsapps\pythonsoftwarefoundation.python.3.9_3.9.2544.0_x64__qbz5n2kfra8p0\lib\site-packages (21.2.4)
+Collecting pip
+  Using cached pip-21.3.1-py3-none-any.whl (1.7 MB)
+Installing collected packages: pip
+  WARNING: The scripts pip.exe, pip3.9.exe and pip3.exe are installed in 'C:\Users\priya\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\Scripts' which is not on PATH.
+  Consider adding this directory to PATH or, if you prefer to suppress this warning, use --no-warn-script-location.
+Successfully installed pip-21.3.1
+WARNING: You are using pip version 21.2.4; however, version 21.3.1 is available.
+You should consider upgrading via the 'C:\Users\priya\AppData\Local\Microsoft\WindowsApps\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\python.exe -m pip install --upgrade pip' command.
+
+(base) C:\Users\priya\Desktop\Coding\booking-bot>python3.9 -m pip list
+Package Version
+------- -------
+pip     21.3.1
+
+(base) C:\Users\priya\Desktop\Coding\booking-bot>pip3 install lxml
+Requirement already satisfied: lxml in c:\users\priya\anaconda3\lib\site-packages (4.6.1)
+
+(base) C:\Users\priya\Desktop\Coding\booking-bot>python main.py
+Traceback (most recent call last):
+  File "main.py", line 13, in <module>
+    bot.report_results()
+  File "C:\Users\priya\Desktop\Coding\booking-bot\Bot\booking.py", line 80, in report_results
+    report.get_hotel_titles()
+AttributeError: 'BookingReport' object has no attribute 'get_hotel_titles'
+
+(base) C:\Users\priya\Desktop\Coding\booking-bot>
+(base) C:\Users\priya\Desktop\Coding\booking-bot>python main.py
+Exiting...
+
+(base) C:\Users\priya\Desktop\Coding\booking-bot>python main.py
+US$898
+US$658
+US$558
+US$1,148
+US$775
+US$862
+US$754
+US$791
+US$718
+US$920
+US$858
+US$978
+US$1,035
+US$5,598
+US$485
+US$1,195
+US$1,989
+US$1,126
+US$2,260
+US$1,437
+US$30,450
+US$977
+US$3,796
+US$4,840
+US$240
+Exiting...
+
+(base) C:\Users\priya\Desktop\Coding\booking-bot>python main.py
+[['US$898', 'US$898', <selenium.webdriver.remote.webelement.WebElement (session="6ce1e3b4a6b42c8e362deabc74accfc1", element="b7ad093f-1feb-4176-abcf-aebaf75cbf0c")>], ['US$837', 'US$837', <selenium.webdriver.remote.webelement.WebElem
+ent (session="6ce1e3b4a6b42c8e362deabc74accfc1", element="73dfdfe1-0d2e-46b9-8fc5-34d2a419614d")>], ['US$791', 'US$791', <selenium.webdriver.remote.webelement.WebElement (session="6ce1e3b4a6b42c8e362deabc74accfc1", element="39121e61-
+640a-4023-b2ea-471c3978177c")>], ['US$658', 'US$658', <selenium.webdriver.remote.webelement.WebElement (session="6ce1e3b4a6b42c8e362deabc74accfc1", element="70744b60-d098-4ab8-986f-a56715815cf8")>], ['US$775', 'US$775', <selenium.web
+driver.remote.webelement.WebElement (session="6ce1e3b4a6b42c8e362deabc74accfc1", element="236b6e0b-5cb3-42a9-a57b-3bd12ebb681c")>], ['US$754', 'US$754', <selenium.webdriver.remote.webelement.WebElement (session="6ce1e3b4a6b42c8e362de
+abc74accfc1", element="a45dcc16-f042-4c9b-b8f2-87df3c434ac1")>], ['US$485', 'US$485', <selenium.webdriver.remote.webelement.WebElement (session="6ce1e3b4a6b42c8e362deabc74accfc1", element="efbf789a-f77a-4702-8420-8538ad61b179")>], ['
+US$920', 'US$920', <selenium.webdriver.remote.webelement.WebElement (session="6ce1e3b4a6b42c8e362deabc74accfc1", element="8478971a-4a42-44d0-ab06-481f56e481d4")>], ['US$558', 'US$558', <selenium.webdriver.remote.webelement.WebElement
+ (session="6ce1e3b4a6b42c8e362deabc74accfc1", element="42fd4d09-68eb-4c05-be0d-183de4ac1095")>], ['US$978', 'US$978', <selenium.webdriver.remote.webelement.WebElement (session="6ce1e3b4a6b42c8e362deabc74accfc1", element="8ec00d4d-864
+4-4519-9b5f-33b83d61140c")>], ['US$993', 'US$993', <selenium.webdriver.remote.webelement.WebElement (session="6ce1e3b4a6b42c8e362deabc74accfc1", element="f3dbc6ed-d276-4cf8-a50f-66490c017909")>], ['US$1,148', 'US$1,148', <selenium.we
+bdriver.remote.webelement.WebElement (session="6ce1e3b4a6b42c8e362deabc74accfc1", element="04530b2c-d906-4c05-a49b-ef419f8fb226")>], ['US$718', 'US$718', <selenium.webdriver.remote.webelement.WebElement (session="6ce1e3b4a6b42c8e362d
+eabc74accfc1", element="3a62f72c-fce0-49c5-ae40-71a48432db2d")>], ['US$1,126', 'US$1,126', <selenium.webdriver.remote.webelement.WebElement (session="6ce1e3b4a6b42c8e362deabc74accfc1", element="697994c3-07f6-4395-a874-a92616f72065")>
+], ['US$2,260', 'US$2,260', <selenium.webdriver.remote.webelement.WebElement (session="6ce1e3b4a6b42c8e362deabc74accfc1", element="345aa430-5b1b-409d-8e1b-ccd732a745fe")>], ['US$1,989', 'US$1,989', <selenium.webdriver.remote.webeleme
+nt.WebElement (session="6ce1e3b4a6b42c8e362deabc74accfc1", element="34917e24-ea09-4ec0-9459-3a8fcee60ff1")>], ['US$1,035', 'US$1,035', <selenium.webdriver.remote.webelement.WebElement (session="6ce1e3b4a6b42c8e362deabc74accfc1", elem
+ent="14481f16-b7c6-40a9-95cb-41276c415a70")>], ['US$1,501', 'US$1,501', <selenium.webdriver.remote.webelement.WebElement (session="6ce1e3b4a6b42c8e362deabc74accfc1", element="7e6edbeb-70a6-4cf9-9d2b-b0d0b2ba3da7")>], ['US$977', 'US$9
+77', <selenium.webdriver.remote.webelement.WebElement (session="6ce1e3b4a6b42c8e362deabc74accfc1", element="e0820206-f1d4-4fb2-9ca3-428d8e2093bb")>], ['US$1,437', 'US$1,437', <selenium.webdriver.remote.webelement.WebElement (session=
+"6ce1e3b4a6b42c8e362deabc74accfc1", element="bbdd8367-30a0-410d-9973-fdf30253de35")>], ['US$4,840', 'US$4,840', <selenium.webdriver.remote.webelement.WebElement (session="6ce1e3b4a6b42c8e362deabc74accfc1", element="c8798194-97cc-416b
+-a7e7-cc546af138d4")>], ['US$3,796', 'US$3,796', <selenium.webdriver.remote.webelement.WebElement (session="6ce1e3b4a6b42c8e362deabc74accfc1", element="f1da4b59-2ab9-4eb2-aca5-5827d67cd88b")>], ['US$1,195', 'US$1,195', <selenium.webd
+river.remote.webelement.WebElement (session="6ce1e3b4a6b42c8e362deabc74accfc1", element="7e190fb9-173a-41e8-bae3-51a58fc3b678")>], ['US$2,730', 'US$2,730', <selenium.webdriver.remote.webelement.WebElement (session="6ce1e3b4a6b42c8e36
+2deabc74accfc1", element="e3e56303-dfbd-464a-90f9-3499cc2c5cfa")>], ['US$30,450', 'US$30,450', <selenium.webdriver.remote.webelement.WebElement (session="6ce1e3b4a6b42c8e362deabc74accfc1", element="c9894a4d-47c1-421b-89d4-2d85be4c644
+2")>], ['US$862', 'US$862', <selenium.webdriver.remote.webelement.WebElement (session="6ce1e3b4a6b42c8e362deabc74accfc1", element="8c9cb8e3-d975-42f2-b013-0423c8da1353")>]]
+Exiting...
+
+(base) C:\Users\priya\Desktop\Coding\booking-bot>python main.py
+[['Hotel Edison Times Square', 'US$898', '7.7'], ['Stewart Hotel', 'US$658', '7.1'], ['Sohotel', 'US$558', '8.4'], ['Hyatt Grand Central New York', 'US$1,148', '7.7'], ['Radio City Apartments', 'US$775', '8.6'], ['Hyatt Place New Yor
+k/Midtown-South', 'US$862', '8.3'], ['Courtyard New York Manhattan/Midtown East', 'US$754', '8.4'], ['San Carlos Hotel New York', 'US$791', '8.9'], ['Heritage Hotel New York City', 'US$718', '7.5'], ['Best Western Plus Hospitality Ho
+use Suites', 'US$920', '8.8'], ['Front &amp; Wall Street, Operated by WhyHotel', 'US$858', '7.0'], ['Homewood Suites Midtown Manhattan Times Square South', 'US$837', '8.4'], ['Residence Inn by Marriott New York Downtown Manhattan/Wor
+ld Trade Center Area', 'US$978', '8.6'], ['Hotel 57', 'US$1,035', '7.6'], ['The Time New York', 'US$5,598', '8.1'], ['TRYP by Wyndham Times Square South', 'US$485', '7.7'], ['The James New York - NoMad', 'US$1,501', '8.5'], ['New Yor
+k Hilton Midtown', 'US$1,989', '7.9'], ['Fifty Hotel &amp; Suites by Affinia', 'US$1,126', '8.1'], ['Hotel Beacon', 'US$2,260', '8.8'], ['Gardens Suites Hotel by Affinia', 'US$1,437', '8.3'], ['The Whitby Hotel', 'US$30,450', '9.4'],
+ ['City Club Hotel', 'US$977', '7.8'], ['JW Marriott Essex House New York', 'US$3,796', '8.3'], ['Residence Inn by Marriott New York Manhattan/ Midtown Eastside', 'US$1,798', '8.7']]
+Exiting...
+
+(base) C:\Users\priya\Desktop\Coding\booking-bot>prettytable --version
+'prettytable' is not recognized as an internal or external command,
+operable program or batch file.
+
+(base) C:\Users\priya\Desktop\Coding\booking-bot>pip install prettytable
+Collecting prettytable
+  Downloading prettytable-2.4.0-py3-none-any.whl (24 kB)
+Requirement already satisfied: wcwidth in c:\users\priya\anaconda3\lib\site-packages (from prettytable) (0.2.5)
+Installing collected packages: prettytable
+Successfully installed prettytable-2.4.0
+
+(base) C:\Users\priya\Desktop\Coding\booking-bot>prettytable --version
+'prettytable' is not recognized as an internal or external command,
+operable program or batch file.
+
+(base) C:\Users\priya\Desktop\Coding\booking-bot>import prettytable
+'import' is not recognized as an internal or external command,
+operable program or batch file.
+
+(base) C:\Users\priya\Desktop\Coding\booking-bot>pip show prettytable
+Name: prettytable
+Version: 2.4.0
+Summary: A simple Python library for easily displaying tabular data in a visually appealing ASCII table format
+Home-page: https://github.com/jazzband/prettytable
+Author: Luke Maurits
+Author-email: luke@maurits.id.au
+License: BSD (3 clause)
+Location: c:\users\priya\anaconda3\lib\site-packages
+Requires: wcwidth
+Required-by:
+
+(base) C:\Users\priya\Desktop\Coding\booking-bot>python main.py
++-------------------------------------------------------------------------------+-------------+-------------+
+|                                   Hotel Name                                  | Hotel Price | Hotel Score |
++-------------------------------------------------------------------------------+-------------+-------------+
+|                           Hotel Edison Times Square                           |    US$898   |     7.7     |
+|                                 Stewart Hotel                                 |    US$658   |     7.1     |
+|                                    Sohotel                                    |    US$558   |     8.4     |
+|                          Hyatt Grand Central New York                         |   US$1,148  |     7.7     |
+|                             Radio City Apartments                             |    US$775   |     8.6     |
+|                       Hyatt Place New York/Midtown-South                      |    US$862   |     8.3     |
+|                   Courtyard New York Manhattan/Midtown East                   |    US$754   |     8.4     |
+|                           San Carlos Hotel New York                           |    US$791   |     8.9     |
+|                          Heritage Hotel New York City                         |    US$718   |     7.5     |
+|                   Best Western Plus Hospitality House Suites                  |    US$920   |     8.8     |
+|                 Front &amp; Wall Street, Operated by WhyHotel                 |    US$858   |     7.0     |
+|              Homewood Suites Midtown Manhattan Times Square South             |    US$837   |     8.4     |
+| Residence Inn by Marriott New York Downtown Manhattan/World Trade Center Area |    US$978   |     8.6     |
+|                                    Hotel 57                                   |   US$1,035  |     7.6     |
+|                               The Time New York                               |   US$5,598  |     8.1     |
+|                       TRYP by Wyndham Times Square South                      |    US$485   |     7.7     |
+|                           The Kitano Hotel New York                           |   US$1,195  |     8.8     |
+|                           The James New York - NoMad                          |   US$1,501  |     8.5     |
+|                            New York Hilton Midtown                            |   US$1,989  |     7.9     |
+|                      Fifty Hotel &amp; Suites by Affinia                      |   US$1,126  |     8.1     |
+|                                  Hotel Beacon                                 |   US$2,260  |     8.8     |
+|                        Gardens Suites Hotel by Affinia                        |   US$1,437  |     8.3     |
+|                                The Whitby Hotel                               |  US$30,450  |     9.4     |
+|                                City Club Hotel                                |    US$977   |     7.8     |
+|                        JW Marriott Essex House New York                       |   US$3,796  |     8.3     |
++-------------------------------------------------------------------------------+-------------+-------------+
+Exiting...
+
+(base) C:\Users\priya\Desktop\Coding\booking-bot>
